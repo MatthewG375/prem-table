@@ -55,8 +55,7 @@ championship_colours_25_26 = {
 
 def add_image_metadata(id_colour_dict: dict[int, str], league: str):
     """Add metadata to images"""
-    os.makedirs("metadata_update", exist_ok=True)
-
+    os.makedirs(f"metadata_update/{league}", exist_ok=True)
     for team, colour in id_colour_dict.items():
         im = Image.open(f"Logos/{league}/{team}.png")
         meta = PngImagePlugin.PngInfo()
