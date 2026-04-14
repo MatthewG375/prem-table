@@ -134,6 +134,7 @@ def putfirst(df, i):
 def gen_additional_data(teams, df2):
     '''Generates additional data for each team'''
     # add max points row, goal difference, and goals scored to dataframe (for H2H tiebreakers)
+    current_points = []
     max_points = []
     gd = []
     gf = []
@@ -143,14 +144,16 @@ def gen_additional_data(teams, df2):
         # Calculate points deductions for sorting purposes
         points, max_pts = points_deductions(team.id, points, max_pts)
 
+        current_points.append(points)
         max_points.append(max_pts)
         gd.append(int(goal_difference))
         gf.append(goals_for)
 
+    teams["points"] = current_points
     teams['max_points'] = max_points
     teams['goal_difference'] = gd
     teams['goals_for'] = gf
-    teams = teams.sort_values(by=['max_points', 'goal_difference', 'goals_for'],
+    teams = teams.sort_values(by=['points', 'goal_difference', 'goals_for'],
                             ascending=[False, False, False])
 
     # make dataframe with all teams in, in order to remove extraneous teams from main dataset
