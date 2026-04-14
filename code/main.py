@@ -4,7 +4,7 @@ import sys
 from plotting import table_gen
 sys.dont_write_bytecode = True
 
-TITLE_PL = 'EPL: The race for European Competitions   '
+TITLE_PL = 'Premier League fixtures and table visualisation   '
 FILE_PL = 'PL Europe Race'
 lines_pl = [
     [5, "Above __ points for UCL", '#00004b'],

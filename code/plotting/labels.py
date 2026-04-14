@@ -34,7 +34,7 @@ def format_title_and_axes_labels(ax: Axes, base_title, title_pos, df2, teams, to
 
     ax.set_title(title_text, size=16, fontname='sans-serif', weight='semibold')
 
-    ax.set_xlabel("Teams in order of highest possible points total   ",
+    ax.set_xlabel("Teams in table order   ",
             labelpad=15, size=x_labelsize, fontname='sans-serif', weight='semibold', loc='center')
     ax.set_ylabel("Points and remaining fixures in chronological order",
             labelpad=15, size=y_labelsize, fontname='sans-serif', weight='semibold')
