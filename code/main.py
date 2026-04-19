@@ -9,7 +9,7 @@ FILE_PL = 'PL Europe Race'
 lines_pl = [
     [5, "Above __ points for UCL", '#00004b'],
     [6, "Above __ points for UEL", '#ff6900'],
-    # [6, "Above __ points for CON", '#00be14'],
+    [7, "Above __ points for CON", '#00be14'],
     [17,"Above __ points for safety", '#e21a23']
 ]
 # CONF: [6, "Above __ points guarantees CON", '#00be14'],
