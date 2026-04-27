@@ -153,7 +153,7 @@ def gen_additional_data(teams, df2):
     teams['max_points'] = max_points
     teams['goal_difference'] = gd
     teams['goals_for'] = gf
-    teams = teams.sort_values(by=['points', 'goal_difference', 'goals_for'],
+    teams = teams.sort_values(by=['max_points', 'goal_difference', 'goals_for'],
                             ascending=[False, False, False])
 
     # make dataframe with all teams in, in order to remove extraneous teams from main dataset
