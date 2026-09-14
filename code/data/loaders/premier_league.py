@@ -42,9 +42,9 @@ def load_fixture_data():
     )
 
     df2['status'] = 'SCHEDULED'
-    df2.loc[df2['finished'], 'status'] = 'FINISHED'
+    df2.loc[df2['finished_provisional'], 'status'] = 'FINISHED'
     df2.loc[
-        (df2['started']) & (~df2['finished']), 'status'
+        (df2['started']) & (~df2['finished_provisional']), 'status'
     ] = 'IN_PLAY'
 
     # create dictionary of team crests
